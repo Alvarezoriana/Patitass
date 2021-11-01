@@ -1,0 +1,245 @@
+/* /* .color1 {color: #ff8753;}
+.color2 {color: #ffbb3c;}
+.color3 {color: #ffec5c;}
+.color4 {color: #fffb95;}
+.color5 {color: #fffcc5;} */ 
+
+/* mobile first */
+
+* {
+    text-decoration: none;
+    font-family: 'Averia Sans Libre', cursive;
+    color: white;
+    
+}
+body {
+    display: grid;
+    background-color: #ffec5c;
+    margin: 0%;
+    padding: 0%;
+    grid-template-areas: 
+        'header header header header header header'
+        'nav nav nav nav nav nav'
+        'section section section section aside aside'
+        'footer footer footer footer footer footer'
+        'footer footer footer footer footer footer';
+
+}
+header {grid-area: header;}
+nav {grid-area: nav;}
+section {grid-area: section;}
+aside {grid-area: aside;}
+footer {grid-area: footer;}
+
+
+/* logo */
+#titulo {
+    font-family: 'Emilys Candy', cursive;
+    display: inline;
+    color: white;
+}
+.logo {
+    font-size: 250%;
+    color: white;
+    background-color: #ffbb3c;
+    padding: 5%;
+    margin: 0;
+    text-align: center;
+    
+}
+/* MENU NAV */
+nav {
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+.main {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    background-color: #ff8753;
+    overflow: hidden;
+    position: relative;
+    top: 0%;
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    position: -webkit-sticky;
+}
+li.menu {
+    float: none;
+    display: inline;
+    border-right: 1px solid #fffcc5;
+}
+li.menu a {
+    background-color: #ff8753;
+    display: block;
+    padding: 14px 14px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+li.menu a:hover {
+    background-color: #ffec5c;
+    padding: 14px 14px;
+    color: black;
+}
+.active {
+    background-color:#ffbb3c ;
+}
+#contacto {
+    float: none;
+    text-align: center;
+}
+/* hasta aca el MENU */
+
+/* FOOTER */
+footer {
+    background-color: #ff8753;
+    color: white;
+    padding: 2%;
+    bottom: 0%;
+    display: grid;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    justify-content: right;
+}
+.footer{
+    padding: 10px;
+    bottom: 0%;
+    margin: 0%;
+    padding: 2%;
+    overflow: hidden;
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.atajos {
+    list-style-type: none;
+    color: white;
+    
+   
+}
+#ataj {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    text-decoration: none;
+   
+}
+#rrss{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    text-decoration: none;
+}
+/* hasta aca FOOTER */
+
+/* Pagina COMO AYUDAR */
+.informacion {
+    display: grid;
+    grid-template-columns: 30% 35% 35% ;
+    column-gap: 1%;
+    row-gap: 1%;
+    
+    
+    
+    
+}
+.article p, img {
+    color: #ff8753;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 150%;
+    float: none;
+    width: 100%;
+    
+}
+.article h2, h3{
+    background-color: #ffbb3c;
+    color: white;
+    border: solid;
+    border-radius: 5%;
+    padding: 1%;
+}
+.article {
+    background-color:#fffcc5 ;
+    padding: 3%;
+    border-radius: 5%;
+    margin-bottom: 5%;
+    align-content: center;
+    justify-content: center;
+}
+#transito{
+    color: #ff8753;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#donar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+#pasear {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#comparti{
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+}
+
+
+@media all and (min-width: 768px){
+    /* MENU NAV */
+    li.menu {
+        float: left;
+    }
+    #contacto {
+        float: right;
+    }
+    /* hasta aca el MENU */
+        
+    #ataj {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        
+    }
+    #rrss {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+}
+
+@media all and (min-width: 1024px){
+        /* MENU NAV */
+    .main {
+        position: fixed;
+        
+    }
+    li.menu {
+        float: left;
+    }
+    #contacto {
+        float: right;
+    }
+    /* hasta aca el MENU */
+}
+        
+    
